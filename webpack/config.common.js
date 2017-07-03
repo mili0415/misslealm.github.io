@@ -11,4 +11,4 @@ module.exports = function (webpackConfig, redSkull, webpackPlugins) {
   })
 
   return webpackConfig
-}
+} 

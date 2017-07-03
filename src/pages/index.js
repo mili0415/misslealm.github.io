@@ -5,27 +5,75 @@
  */
 
 import { React, Page } from 'zola'
-
+import '../styles/index.styl'
 export default class Index extends Page {
   render () {
     return (
       <div>
-        <div className="wrap">
-          <h1>Zola</h1>
-          <p>
-            Arnim Zola is a fictional supervillain appearing in American comic
-            books by Marvel Comics. He is a master of biochemistry and is an
-            enemy of Captain America and the Avengers. He first appeared in
-            Captain America #208 (April 1977), created by writer/artist
-            Jack Kirby. He was originally a Nazi biochemist during World War II
-            and survived into the modern age by transferring his conscious mind
-            into the body of a sophisticated robot which protected his mind by
-            storing it in its chest and displaying a digital image of Zola's
-            face on its chest plate.
-          </p>
-        </div>
-        <div className="footer">with <b>♥</b> by lianjia-fe</div>
-      </div>
+        <section id="container" >
+		    <aside className="left-wrap">
+		    	<div className="overlay"></div>
+	          	<div id="sidebar"  className="nav-collapse">
+		          	<header className="inner">
+		          		<a href="profile.html" className="profilepic">
+                  			<img src="../img/ui-sam.jpg" className="img-circle" />
+                  		</a>
+                  		<h1 className="header-author">
+                  			<a href="/" >
+                  				Lealm
+              				</a>
+                  		</h1>
+                  		<p>要求不高，开心就好</p>
+		          		<ul className="sidebar-menu" id="nav-accordion">
+		                  	<li className="mt">
+		                      	<a className="active" href="index.html">
+		                          	<i className="glyphicon glyphicon-home"></i>
+		                          	<span>首页</span>
+		                      	</a>
+		                  	</li>
+		                  	<li className="sub-menu">
+		                      	<a href="javascript:;" >
+		                          	<i className="glyphicon glyphicon-credit-card">
+		                          	</i>
+		                          	<span>归档</span>
+		                      	</a>
+		                  	</li>
+		              	</ul>
+		          	</header>
+	          	</div>
+	      	</aside>
+	      	<section id="main-content">
+	          	<section className="wrapper">
+		            <article>
+		              <div className="meta">发布的时间</div>
+		              <h1 className="title">这是一个标题</h1>
+		              <div className="entry-content">
+		                <p>文章内容啊，内容啊</p>
+		                <p>文章内容啊，内容啊</p>
+		              </div>
+		            </article>
+	          	</section>
+	          	<section className="wrapper">
+		            <article>
+		              <div className="meta">发布的时间</div>
+		              <h1 className="title">这是一个标题</h1>
+		              <div className="entry-content">
+		                <p>文章内容啊，内容啊</p>
+		                <p>文章内容啊，内容啊</p>
+		              </div>
+		            </article>
+	          	</section>
+	      	</section>
+	      	<footer className="site-footer">
+	          	<div className="text-center">
+	              	2017 - 呵呵哒
+	              	<a href="index.html#" className="go-top">
+	                  	<i className="fa fa-angle-up"></i>
+	              	</a>
+	          	</div>
+	      	</footer>
+	  	</section>
+  	</div>
     )
   }
 }
