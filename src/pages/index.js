@@ -6,6 +6,9 @@
 
 import { React, Page } from 'zola'
 import '../styles/index.styl'
+
+const articleList = MY_ARTICLE_DATA
+console.log(articleList)
 export default class Index extends Page {
   render () {
     return (
@@ -43,26 +46,20 @@ export default class Index extends Page {
 	          	</div>
 	      	</aside>
 	      	<section id="main-content">
-	          	<section className="wrapper">
-		            <article>
-		              <div className="meta">发布的时间</div>
-		              <h1 className="title">这是一个标题</h1>
-		              <div className="entry-content">
-		                <p>文章内容啊，内容啊</p>
-		                <p>文章内容啊，内容啊</p>
-		              </div>
-		            </article>
-	          	</section>
-	          	<section className="wrapper">
-		            <article>
-		              <div className="meta">发布的时间</div>
-		              <h1 className="title">这是一个标题</h1>
-		              <div className="entry-content">
-		                <p>文章内容啊，内容啊</p>
-		                <p>文章内容啊，内容啊</p>
-		              </div>
-		            </article>
-	          	</section>
+	      		{articleList.map((article,index) => {
+	      			return(
+	      				<section className="wrapper" key={`content${index}`}>
+				            <article>
+				              	<div className="meta">{article.createTime}</div>
+				              	<h1 className="title">{article.title}</h1>
+				              	<div className="entry-content">
+				                	{article.description}
+				              	</div>
+				              	<div className="actMore"><a href={`#/article${article.path}`}>more >></a></div>
+				            </article>
+			          	</section>
+      				)
+	      		})}
 	      	</section>
 	      	<footer className="site-footer">
 	          	<div className="text-center">

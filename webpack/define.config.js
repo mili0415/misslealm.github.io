@@ -9,7 +9,7 @@ const getAllMarkdownFile = function(filePath){
    */
   function walkFile(filePath){
     const stat = fs.statSync(filePath)
-    let result = []
+    var result = []
     if(stat.isDirectory()){
       // read dirs
       const dirs = fs.readdirSync(filePath)
@@ -52,6 +52,18 @@ const getAllMarkdownFile = function(filePath){
         }
         return false
       }) || `:${defaultDate.toLocaleDateString()} ${defaultDate.toLocaleTimeString()}`
+      const contentTitle =  content.split('\n').find(str =>{
+        if(str.indexOf('title') >=0){
+          return true
+        }
+        return false
+      }) || "title:"
+      const contentDescription =  content.split('\n').find(str =>{
+        if(str.indexOf('description') >=0){
+          return true
+        }
+        return false
+      }) || "description:"
       
       const createTimeArr = createTimeStr.split(':')
       createTimeArr.shift()
@@ -59,8 +71,9 @@ const getAllMarkdownFile = function(filePath){
       const fileName = path.basename(file,'.md')
       const filePath = file.replace(ARTICLE_PATH,'')
       return {
-        title:fileName,
+        title:contentTitle.split(':')[1],
         path:filePath.replace('.md',''),
+        description:contentDescription.split(':')[1],
         createTime
       }
    })
@@ -72,8 +85,7 @@ const getAllMarkdownFile = function(filePath){
     return a2.createTime - a1.createTime
    })
 }
-
-
+console.log(getAllMarkdownFile(ARTICLE_PATH))
 module.exports = function(redskull, env) {
   
   const list = getAllMarkdownFile(ARTICLE_PATH)
