@@ -45,7 +45,6 @@ const getAllMarkdownFile = function(filePath){
         charset:'utf-8'
       }).toString()
 
-      const defaultDate = new Date()
       const createTimeStr = content.split('\n').find(str =>{
         if(str.indexOf('createTime') >=0){
           return true
@@ -97,7 +96,5 @@ module.exports = function(redskull, env) {
     }
   ]
   */
-  return {
-    MY_ARTICLE_DATA:JSON.stringify(list)
-  }
+  return list
 }

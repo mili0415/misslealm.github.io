@@ -5,13 +5,14 @@
   "scripts": {
     "start": "ENVIRONMENT=development redskull start --dashboard false",
     "test": "ENVIRONMENT=testing redskull build",
-    "build": "ENVIRONMENT=production redskull build --publicPath https://misslealm.github.io/dist/ && cp -f ./dist/index.html ./index.html && cp -rf ./article ./dist/article && cp -rf ./src/resources ./dist/resources && cp -rf ./src/img ./dist/img"
-    
+    "build": "ENVIRONMENT=production redskull build --publicPath https://misslealm.github.io/dist/ && cp -f ./dist/index.html ./index.html && cp -rf ./article ./dist/article && cp -rf ./src/resources ./dist/resources"
   },
   "license": "ISC",
   "dependencies": {
     "@lianjia/zola-core": "0.0.4",
-    "showdown": "^1.7.1"
+    "showdown": "^1.7.1",
+    "chokidar": "^1.7.0",
+    "react-html-parser": "^1.0.3"
   },
   "redskull": {
     "port": 6003,
@@ -20,5 +21,8 @@
     "dist": "./dist",
     "openBrowser": false,
     "favico": "./src/favicon.ico"
+  },
+  "devDependencies": {
+    "highlight.js": "^9.12.0"
   }
 }

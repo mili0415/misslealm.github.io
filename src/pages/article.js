@@ -8,15 +8,26 @@ import { React, Page } from 'zola'
 // import ArticleMap  from 'data/article'
 import AsyncComponent from 'modules/AsyncComponent'
 import ArticleRender from 'modules/ArticleRender'
-export default class Index extends Page {
+import articles from 'data/article'
 
-  render () {
-  	const filePath = this.props.params.path
-  	const path = `/article/${filePath}.md`
-    return (
-      <div>
-      	<ArticleRender articlePath={path}/>
-      </div>
-    )
-  }
+import '../styles/article.styl'
+
+export default class Index extends React.Component {
+	// <ArticleRender articlePath={path}/>
+	
+  	render () {
+	  	const filePath = this.props.params.path
+	  	const path = `/article/${filePath}.md`
+	  	const nowComp = articles.find((art,index) => {
+			return art.path == `/${filePath}`
+		})
+	    return (
+	      <div>
+	      	<div className="article_header"></div>
+	      	<div className="article-wrap">
+	      		<AsyncComponent comFn={nowComp.component}/>
+	      	</div>
+	      </div>
+	    )
+  	}
 }

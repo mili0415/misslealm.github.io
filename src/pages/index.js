@@ -8,7 +8,6 @@ import { React, Page } from 'zola'
 import '../styles/index.styl'
 
 const articleList = MY_ARTICLE_DATA
-console.log(articleList)
 export default class Index extends Page {
   render () {
     return (
@@ -19,14 +18,14 @@ export default class Index extends Page {
 	          	<div id="sidebar"  className="nav-collapse">
 		          	<header className="inner">
 		          		<a href="profile.html" className="profilepic">
-                  			<img src="../img/ui-sam.jpg" className="img-circle" />
+                  			<img src="../img/touxiang.jpeg" className="img-circle" />
                   		</a>
                   		<h1 className="header-author">
                   			<a href="/" >
                   				Lealm
               				</a>
                   		</h1>
-                  		<p>要求不高，开心就好</p>
+                  		<p>这里是签名</p>
 		          		<ul className="sidebar-menu" id="nav-accordion">
 		                  	<li className="mt">
 		                      	<a className="active" href="index.html">
@@ -34,13 +33,7 @@ export default class Index extends Page {
 		                          	<span>首页</span>
 		                      	</a>
 		                  	</li>
-		                  	<li className="sub-menu">
-		                      	<a href="javascript:;" >
-		                          	<i className="glyphicon glyphicon-credit-card">
-		                          	</i>
-		                          	<span>归档</span>
-		                      	</a>
-		                  	</li>
+		                  	
 		              	</ul>
 		          	</header>
 	          	</div>
@@ -70,6 +63,7 @@ export default class Index extends Page {
 	          	</div>
 	      	</footer>
 	  	</section>
+	  	
   	</div>
     )
   }
