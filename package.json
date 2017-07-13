@@ -20,7 +20,7 @@
     "src": "./src",
     "entry": "index.js",
     "openBrowser": false,
-    
+    "dist": "./dist",
     "favico": "./src/favicon.ico"
   }
 }
