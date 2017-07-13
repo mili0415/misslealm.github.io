@@ -6,8 +6,7 @@
 
 import { React, Page } from 'zola'
 import '../styles/index.styl'
-
-const articleList = MY_ARTICLE_DATA
+import articleList from 'data/article'
 export default class Index extends Page {
   render () {
     return (
