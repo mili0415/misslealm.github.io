@@ -20,7 +20,7 @@ export default class Index extends Page {
 	          	<div id="sidebar"  className="nav-collapse">
 		          	<header className="inner">
 		          		<a href="profile.html" className="profilepic">
-                  			<img src="../img/touxiang.jpeg" className="img-circle" />
+                  			<img src="https://avatars2.githubusercontent.com/u/24605662?v=3&amp;u=0a7208324d7cdfb03d5d0686e0d0bade3de6a1e2&amp;s=400" className="img-circle" />
                   		</a>
                   		<h1 className="header-author">
                   			<a href="/" >
