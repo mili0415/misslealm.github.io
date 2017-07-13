@@ -12,6 +12,9 @@ export default class Index extends Page {
   render () {
     return (
       <div>
+      	<header className="out_header">
+      		<a href="/">首页</a>
+      	</header>
         <section id="container" >
 		    <aside className="left-wrap">
 		    	<div className="overlay"></div>
@@ -56,7 +59,7 @@ export default class Index extends Page {
 	      	</section>
 	      	<footer className="site-footer">
 	          	<div className="text-center">
-	              	2017 - 呵呵哒
+	              	2017 - 没有版权，哈哈哈哈
 	              	<a href="index.html#" className="go-top">
 	                  	<i className="fa fa-angle-up"></i>
 	              	</a>

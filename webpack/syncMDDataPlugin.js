@@ -57,10 +57,10 @@ Object.assign(SyncMDDataPlugin.prototype,{
 		    writeData()
 	  	});
 
-	  	var watcher = chokidar.watch(ARTILE_PATH,{
-        	ignoreInitial:true
-        })
-        watcher.on('add', writeData).on('unlink',writeData).on('change',writeData)
+	  	// var watcher = chokidar.watch(ARTILE_PATH,{
+    //     	ignoreInitial:true
+    //     })
+    //     watcher.on('add', writeData).on('unlink',writeData).on('change',writeData)
 
 	}
 })
